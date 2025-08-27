@@ -1,5 +1,4 @@
 <div class="container">
-
   <!-- Left Side -->
   <div class="left-panel">
     <div class="avatar">
@@ -7,77 +6,75 @@
     </div>
     <h2>Let's get you set up</h2>
     <p>It should only take a couple of minutes to pair with your watch</p>
-
-    <!-- Correct ng-zorro button -->
-    <button nz-button nzType="default" class="next-btn" nzShape="circle" nzSize="large">
+    <button nz-button nzType="default" class="next-btn">
       <span nz-icon nzType="arrow-right"></span>
     </button>
   </div>
 
   <!-- Right Side -->
-   <div class="right-panel">
+  <div class="right-panel">
+    <form nz-form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
-    <nz-form-item>
+      <nz-form-item>
         <nz-form-label [nzSpan]="6">Name</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-          <input nz-input placeholder="Enter name" />
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please add your name">
+          <input nz-input formControlName="name" placeholder="Enter name" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Gender</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-          <label nz-radio-group>
-            <label nz-radio [nzValue]="'male'">Male</label>
-            <label nz-radio [nzValue]="'female'">Female</label>
-          </label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="please select the gender">
+          <nz-radio-group formControlName="gender">
+            <label nz-radio nzValue="male">Male</label>
+            <label nz-radio nzValue="female">Female</label>
+          </nz-radio-group>
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Date of Birth</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-            <nz-date-picker></nz-date-picker>
+        <nz-form-control [nzSpan]="14" nzErrorTip="please select the valid DoB">
+          <nz-date-picker formControlName="dob"></nz-date-picker>
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Email</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-          <input nz-input placeholder="Enter the email" />
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please add the valid email">
+          <input nz-input formControlName="email" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Mobile</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-          <input nz-input placeholder="+94 76 181 0505" />
+        <nz-form-control [nzSpan]="14" nzErrorTip="please add valid mobile number">
+          <input nz-input formControlName="mobile" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Customer ID</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-          <input nz-input placeholder="ER23-345R-EWD7-67JN" />
+        <nz-form-control [nzSpan]="14" nzErrorTip="please add the valid customer ID">
+          <input nz-input formControlName="customerId" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
         <nz-form-label [nzSpan]="6">Membership</nz-form-label>
-        <nz-form-control [nzSpan]="14">
-            <label nz-radio-group >
-                <label nz-radio nzValue="classic">Classic</label>
-                <label nz-radio nzValue="silver">Silver</label>
-                <label nz-radio nzValue="gold">Gold</label>
-            </label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="please select membership">
+          <nz-radio-group nz-radio-group formControlName="membership">
+            <label nz-radio nzValue="classic">Classic</label>
+            <label nz-radio nzValue="silver">Silver</label>
+            <label nz-radio nzValue="gold">Gold</label>
+          </nz-radio-group>
         </nz-form-control>
       </nz-form-item>
 
       <div class="btn-row">
-        <button nz-button nzSize="large" nzType="default">Cancel</button>
-        <button nz-button nzSize="large" nzType="primary">Save</button>
+        <button nz-button nzType="default">Cancel</button>
+        <button nz-button nzType="primary" >Save</button>
       </div>
-
-   </div>
-
+    </form>
+  </div>
 </div>
