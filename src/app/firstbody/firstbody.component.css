@@ -1,0 +1,33 @@
+* {
+  background-color: rgb(192, 190, 194);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;               
+  align-items: center;         
+  justify-content: center;     
+  gap: 40px;                   
+  padding: 20px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.first, .second {
+  font-weight: 900;
+  font-size: 76px;
+  margin: 0;
+  color: rgb(97, 97, 97);
+}
+
+.image-block img {
+  max-width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}

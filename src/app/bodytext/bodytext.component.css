@@ -1,0 +1,16 @@
+.bodytext{
+    background-color: rgb(97, 102, 112);
+    padding: 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bodytext h3{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+.bodytext p{
+    text-align: center;
+    font-size: 14px;
+}
