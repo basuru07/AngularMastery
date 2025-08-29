@@ -1,10 +1,10 @@
 <div nz-row>
-    <div nz-col>
-        <nz-card class="custom-card">
-            <div class="radio-dot">
+    <div nz-col *ngFor="let card of cards">
+        <nz-card class="custom-card" [ngClass]="{'selected': card.selected}" (click)="toggleCard(card)">
+            <div class="radio-dot" *ngIf="card.icon">
                 <div class="radio-dot2"></div>
             </div>
-            <p class="card-text">Helping cure HIV across the world</p>
+            <p class="card-text">{{card.description}}</p>
         </nz-card>    
     </div>
     

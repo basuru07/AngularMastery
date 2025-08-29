@@ -1,8 +1,11 @@
-.custom-card{
-    background-color: rgb(62, 146, 202);
-    margin: 20px 18px;
-    height: 210px;
-    width: 300px;
+*{
+    background-color: rgb(97, 102, 112);
+    padding-left: 30px;
+}.custom-card{
+    background-color: rgb(250, 250, 250);
+    margin: 20px 14px;
+    height: 180px;
+    width: 260px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -11,6 +14,10 @@
     position: relative;
     text-align: center;
     cursor: pointer;
+}
+.custom-card.selected {
+  background-color: #1890ff; 
+  border: #1890ff;
 }
 .radio-dot{
     position: absolute;
@@ -34,7 +41,9 @@
 .card-text{
     position: absolute;
     bottom: 34px;
-    left: 23px;
-    color: white;
+    left: 1px;
+    color: rgb(0, 0, 0);
     align-items: center;
+    font-size: 14px;
+    background-color: transparent;
 }
