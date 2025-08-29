@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FirstbodyComponent } from './firstbody/firstbody.component';
 import { BodytextComponent } from './bodytext/bodytext.component';
+import { CardComponent } from './card/card.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 registerLocaleData(en);
 
@@ -21,13 +24,16 @@ registerLocaleData(en);
     AppComponent,
     NavbarComponent,
     FirstbodyComponent,
-    BodytextComponent
+    BodytextComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NzCardModule,
+    NzGridModule,
     BrowserAnimationsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

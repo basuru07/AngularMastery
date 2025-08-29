@@ -44,13 +44,17 @@
 }
 .signup-btn {
   margin-left: auto;
-  background-color: #000000;
-  border-color: #ffffff;
-  border-radius: 15%;
-  color: white;
-  padding: 0px 20px;
+  background-color: #000000;   
+  border: 2px solid #ffffff;   
+  border-radius: 8px;         
+  color: #ffffff;              
+  padding: 8px 20px;           
+  font-size: 16px;             
+  font-weight: 600;            
+  cursor: pointer;
 }
 .signup-btn:hover {
-  background-color: #40a9ff;
+  background-color: #40a9ff;  
   border-color: #40a9ff;
+  color: #ffffff;
 }
