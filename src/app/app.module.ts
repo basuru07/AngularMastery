@@ -16,6 +16,11 @@ import { BodytextComponent } from './bodytext/bodytext.component';
 import { CardComponent } from './card/card.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { FooterComponent } from './footer/footer.component';
+import { NzButtonModule, NzButtonSize } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 registerLocaleData(en);
 
@@ -25,7 +30,8 @@ registerLocaleData(en);
     NavbarComponent,
     FirstbodyComponent,
     BodytextComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +40,10 @@ registerLocaleData(en);
     HttpClientModule,
     NzCardModule,
     NzGridModule,
+    NzButtonModule,
+    NzIconModule,
+    NzRadioModule,
+    NzSpaceModule,
     BrowserAnimationsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

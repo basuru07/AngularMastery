@@ -1,0 +1,32 @@
+*{
+    background-color: rgb(97, 102, 112);    
+}
+.btn-group{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 230px;
+}
+.btn-group button{
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+}
+.btn-group .back-btn{
+    background-color: #1890ff;
+    border: #1890ff;
+    color: white;
+}
+.btn-group .back-btn:hover{
+    background-color: #1c7ad1;
+}
+.btn-group .next-btn{
+    background-color: #40E0D0;
+    border: #40E0D0;
+    color: white;
+}
+.btn-group .next-btn:hover{
+    background-color: #2db8aa;
+    border: #40E0D0;
+}
