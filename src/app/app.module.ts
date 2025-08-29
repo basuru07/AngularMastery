@@ -21,6 +21,8 @@ import { NzButtonModule, NzButtonSize } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(en);
 
@@ -31,7 +33,9 @@ registerLocaleData(en);
     FirstbodyComponent,
     BodytextComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

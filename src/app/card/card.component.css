@@ -19,6 +19,9 @@
   background-color: #1890ff; 
   border: #1890ff;
 }
+.custom-card.selected .card-text{
+    color: white;
+}
 .radio-dot{
     position: absolute;
     top: 15px;
@@ -32,7 +35,7 @@
 .radio-dot2{
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 9px;
     width: 27px;
     height: 27px;
     border-radius: 50%;
