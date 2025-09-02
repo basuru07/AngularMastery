@@ -22,19 +22,24 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+
+// ROUTING
+import { ProfileComponent } from './profile/profile.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserSetupComponent
+    UserSetupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, // adding the APP Routing
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
     HttpClientModule,
     BrowserAnimationsModule,
 
@@ -47,6 +52,7 @@ registerLocaleData(en);
     NzRadioModule,
     NzDatePickerModule,
     NzIconModule,
+    NzUploadModule,
     NzMessageModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

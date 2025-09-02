@@ -6,9 +6,11 @@
     </div>
     <h2>Let's get you set up</h2>
     <p>It should only take a couple of minutes to pair with your watch</p>
-    <button nz-button nzType="default" class="next-btn">
-      <span nz-icon nzType="arrow-right"></span>
-    </button>
+    <button nz-button nzType="default" class="next-btn" routerLink="/profile-component" routerLinkActive="active">
+  <span nz-icon nzType="arrow-right"></span>
+</button>
+
+
   </div>
 
   <!-- Right Side -->
@@ -16,15 +18,15 @@
     <form nz-form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Name</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="Please add your name">
+        <nz-form-label>Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your name">
           <input nz-input formControlName="name" placeholder="Enter name" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Gender</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="please select the gender">
+        <nz-form-label>Gender</nz-form-label>
+        <nz-form-control nzErrorTip="please select the gender">
           <nz-radio-group formControlName="gender">
             <label nz-radio nzValue="male">Male</label>
             <label nz-radio nzValue="female">Female</label>
@@ -33,47 +35,85 @@
       </nz-form-item>
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Date of Birth</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="please select the valid DoB">
+        <nz-form-label >Date of Birth</nz-form-label>
+        <nz-form-control nzErrorTip="please select the valid DoB">
           <nz-date-picker formControlName="dob"></nz-date-picker>
         </nz-form-control>
       </nz-form-item>
 
-      <nz-form-item>
-        <nz-form-label [nzSpan]="6">Email</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="Please add the valid email">
-          <input nz-input formControlName="email" />
+       <!--dob > 18-->
+      <div *ngIf="isOver18 === true">
+        <nz-form-item>
+        <nz-form-label>University</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your university">
+          <input nz-input formControlName="university" placeholder="Enter university" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Mobile</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="please add valid mobile number">
-          <input nz-input formControlName="mobile" />
+        <nz-form-label>Occupation</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your occupation">
+          <input nz-input formControlName="occupation" placeholder="Enter occupation" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Customer ID</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="please add the valid customer ID">
-          <input nz-input formControlName="customerId" />
+        <nz-form-label>Driving License Number</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your Driving License Number">
+          <input nz-input formControlName="drivingLicense" placeholder="Enter driving license number" />
         </nz-form-control>
       </nz-form-item>
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="6">Membership</nz-form-label>
-        <nz-form-control [nzSpan]="14" nzErrorTip="please select membership">
-          <nz-radio-group nz-radio-group formControlName="membership">
-            <label nz-radio nzValue="classic">Classic</label>
-            <label nz-radio nzValue="silver">Silver</label>
-            <label nz-radio nzValue="gold">Gold</label>
-          </nz-radio-group>
+        <nz-form-label>Email</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your email">
+          <input nz-input formControlName="email" placeholder="Enter email" />
         </nz-form-control>
       </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label>Contact Number</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your Contact Number">
+          <input nz-input formControlName="contactNumber" placeholder="Enter Contact Number" />
+        </nz-form-control>
+      </nz-form-item>
+      </div>    
+      
+       <!--dob < 18-->
+      <div *ngIf="isOver18 === false">
+        <nz-form-item>
+        <nz-form-label>School Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your School Name">
+          <input nz-input formControlName="schoolName" placeholder="Enter Schoo lName" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label>Parent/Guardian Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your guardian name">
+          <input nz-input formControlName="guardianName" placeholder="Enter Guardian Name" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label>Parent/Guardian Contact</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your Guardian Contact">
+          <input nz-input formControlName="guardianContact" placeholder="Enter email" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label> Guardian Relationship</nz-form-label>
+        <nz-form-control nzErrorTip="Please add your relationship">
+          <input nz-input formControlName="relationship" placeholder="Enter Relationship" />
+        </nz-form-control>
+      </nz-form-item>
+
+      </div> 
 
       <div class="btn-row">
         <button nz-button nzType="default">Cancel</button>
-        <button nz-button nzType="primary" >Save</button>
+        <button nz-button nzType="primary" [disabled]="!userForm.valid" type="submit">Save</button>
       </div>
     </form>
   </div>

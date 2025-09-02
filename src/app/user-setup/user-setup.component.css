@@ -5,6 +5,7 @@
   background: #f9f9f9;
 }
 
+
 .left-panel {
   background: #ffc107;
   color: #000;
@@ -52,6 +53,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+  gap: 25pxpx;
 }
 
 .btn-row button {
