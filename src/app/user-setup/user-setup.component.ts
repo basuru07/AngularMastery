@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UserSetupComponent implements OnInit {
 
   userForm!: FormGroup;
-  isOver18: boolean | null = null; // add the validation 
+  isOver18: boolean | null = null; // add the validation
 
   constructor(private fb: FormBuilder) { }
 
@@ -31,7 +31,7 @@ export class UserSetupComponent implements OnInit {
     const today = new Date();
     const birthDate = new Date(dob);
     let age = today.getFullYear() - birthDate.getFullYear();
-    this.isOver18 = age >= 18; 
+    this.isOver18 = age >= 18;
 
     // Remove all conditional fields first
     this.removeConditionalFields();
