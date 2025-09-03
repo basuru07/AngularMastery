@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-setup',
@@ -11,7 +12,7 @@ export class UserSetupComponent implements OnInit {
   userForm!: FormGroup;
   isOver18: boolean | null = null; // add the validation
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
@@ -63,6 +64,7 @@ export class UserSetupComponent implements OnInit {
   onSubmit(): void {
     if (this.userForm.valid) {
       console.log('Form Submitted:', this.userForm.value);
+      this.router.navigate(['/profile-component'],{queryParams: this.userForm.value})
       this.userForm.reset();
       this.isOver18 = null;
       this.removeConditionalFields();
