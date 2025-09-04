@@ -26,6 +26,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
 
 // ROUTING
 import { ProfileComponent } from './profile/profile.component';
+import { EnterNavigationDirective } from './enter-navigation.directive';
 
 registerLocaleData(en);
 
@@ -33,7 +34,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     UserSetupComponent,
-    ProfileComponent
+    ProfileComponent,
+    EnterNavigationDirective
   ],
   imports: [
     BrowserModule,
